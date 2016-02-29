@@ -65,7 +65,11 @@ public class database {
         //statement = db.conn.createStatement();
         int result = statement.executeUpdate(insertQuery);
         return result;
- 
+    }
+    public int getLastid() throws SQLException
+    {
+        ResultSet res = statement.executeQuery("select max(id) from users");
+        return Integer.parseInt(res.getString("id"));
     }
     
 }

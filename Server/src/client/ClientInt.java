@@ -13,6 +13,9 @@ import java.rmi.RemoteException;
  * @author start
  */
 public interface ClientInt extends Remote{
-    void receive(String message) throws RemoteException;
-    
+    void receiveFromFriend(String message,int fid) throws RemoteException;
+    void receiveFromGroup(String message,int gid) throws RemoteException;
+    void receiveAnnouncement(String announce) throws RemoteException;
+    void receiveNotification(String notification) throws RemoteException;
+    void refreshPage()throws RemoteException;
 }

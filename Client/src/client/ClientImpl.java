@@ -19,9 +19,10 @@ public class ClientImpl extends UnicastRemoteObject implements ClientInt {
         this.c = c;
     }
 
-    public void receive(String message) {
-       // c.reciveServer(message);
-          
-    }
+    public void receiveFromFriend(String message,int fid) {}
+    public void receiveFromGroup(String message,int gid) {}
+    public void receiveAnnouncement(String announce) {}
+    public void receiveNotification(String notification) {}
+    public void refreshPage() {}
 
 }

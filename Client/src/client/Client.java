@@ -22,6 +22,7 @@ public class Client {
     ChatServerInt serverRef;
     ClientInt clientRef;
     SignUp signUp;
+    int id;
     /**
      * @param args the command line arguments
      */
@@ -45,7 +46,7 @@ public class Client {
     }
     void sigupData(String name,String email,String username,String password,String country,String gender) {
         try {
-            serverRef.sigupData(name,email,username,password,country,gender);
+            id=serverRef.sigupData_Int(name,email,username,password,country,gender);
             signUp.setVisible(false);
         } catch (RemoteException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
